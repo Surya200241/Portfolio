@@ -1,0 +1,30 @@
+[
+    {
+      "title": "HTML",
+      "imageSrc": "skills/html.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "skills/css.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "skills/react.png"
+    },
+    {
+      "title": "Java",
+      "imageSrc": "skills/th (1).jpg"
+    },
+    {
+      "title": "Github",
+      "imageSrc": "skills/th.jpg"
+    },
+    {
+      "title": "Bootstrap",
+      "imageSrc": "skills/bootstrap.jpg"
+    },
+    {
+      "title": "JavaScript",
+      "imageSrc": "skills/javascript.jpg"
+    }
+  ]
