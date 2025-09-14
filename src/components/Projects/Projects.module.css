@@ -11,96 +11,119 @@
     margin-top: 35px;
 }
 
+
+
 .projectItems {
     display: flex;
+    flex-wrap: wrap;             /* Allow wrapping for responsiveness */
     justify-content: center;
-    gap: 1%;
+    gap: 2rem;
     width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
+
+
 
 .Item {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 2rem);  /* 3 cards per row with spacing */
+    max-width: calc(33.333% - 2rem);
+    padding: 20px;
+    margin: 10px;
     background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
-    box-shadow: 0 16px 14px 0 rgba(4, 21, 45, 1);
-
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
+.Item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Internal content wrapper */
 .ItemContent {
-    margin-top: 18px;
-    margin-left: 9%;
-}
-
-.ItemImg {
-    width: 90%;
-    margin-left: 10px;
-}
-.img3{
-    width: 90%;
-    margin-left: 10px;
-    margin-top: -60px;
-}
-.text {
-    margin-top: 26px;
-
-}
-
-.text h3 {
-    font-family: var(--font-roboto);
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.text p {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 6px;
-    font-family: var(--font-roboto);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 31.5px;
+    gap: 15px;
+}
+
+/* Project image */
+.ItemImg {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+/* Text content */
+.text {
+    max-height: 100px; /* Adjust for visible text */
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.text::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.textTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+   color: rgba(255, 255, 255, 1);
+    margin-bottom: 6px;
+}
+
+.textPara {
+    font-size: 0.95rem;
     color: rgba(255, 255, 255, 1);
+    line-height: 1.4;
 }
 
-.tool {
-    margin-top: 14px;
-}
-
-.tool ul {
-    display: flex;
-    list-style: none;
-    gap: 45px;
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 31.5px;
-}
-
+/* Button container */
 .bt {
-    margin-top: 10px;
     display: flex;
+    gap: 15px;
     list-style: none;
-    text-align: center;
+    padding: 0;
     justify-content: center;
+    margin-top: 12px;
 }
-.bt button:hover{
-    cursor:pointer;
-    background-color:rgb(94, 100, 123) ;
+
+.bt li {
+    /* display: inline-block; */
+    display: flex;
+   gap: 10px;
 }
+
 .bt button {
-    width: 144px;
-    font-size: 30px;
-    font-weight: 600;
+    padding: 10px 24px;
     background: rgba(87, 108, 188, 1);
-    border-radius: 150px;
-    line-height: 37.8px;
-    color: rgba(255, 255, 255, 1);
-    outline: none;
     border: none;
+    color: #fff;
+    border-radius: 150px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
+
+.bt button:hover {
+    background-color: #0056b3;
+}
+
+/* Decorative border under the card */
+.border {
+    margin-top: 20px;
+    height: 4px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    border-radius: 2px;
+}
+
 
 .title {
     font-size: 35px;
@@ -121,28 +144,69 @@
 .border{
     height: 15px;
 }
-@media screen and (max-width: 830px) {
-    .root {
-        flex-direction: column;
-      gap: 15px;
+
+
+
+
+
+/* Tablet (2 cards per row) */
+@media screen and (max-width: 900px) {
+    .Item {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+
+    .text {
+        max-height: 120px;
     }
 
     .title {
-       
-        margin-left: 62px; 
+        font-size: 30px;
+        text-align: center;
+        margin-left: 0;
     }
-    .img3{
-        width: 90%;
-        margin-left: 10px;
-        margin-top: 0px;
+
+    .bt {
+        flex-direction: row;
+        justify-content: center;
     }
-    .projectItems {
+}
+
+/* Mobile (1 card per row) */
+@media screen and (max-width: 600px) {
+    .Item {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .ItemImg {
+        max-height: 200px;
+    }
+
+    .text {
+        max-height: 150px;
+        font-size: 0.9rem;
+    }
+
+    .bt {
         flex-direction: column;
-        gap: 20px;
         align-items: center;
     }
-    .bt button:hover{
-        cursor:pointer;
-        background-color:rgb(94, 100, 123) ;
+
+    .bt li {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bt button {
+        width: 80%;
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-left: 0;
     }
 }

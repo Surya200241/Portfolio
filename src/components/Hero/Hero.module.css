@@ -42,23 +42,33 @@
     padding: 17px 26px;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
 } 
-.heroImg{
-    width: 60%;
-    z-index: 1;
-     height: 300px;
 
+.heroImg {
+    width: 60%;
+    height: 260px;
+    z-index: 1;
+
+    /* 👇 Makes the image rounded */
+    border-radius: 50%;
+
+    /* Animation */
     animation-name: floting;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+       animation: floating 3s ease-in-out infinite;
+
+    /* Optional: object-fit to ensure proper scaling inside the circle */
+    object-fit: cover;
 }
 
+
  
-.heroImg {
+/* .heroImg {
     width: 60%;
     z-index: 1;
     animation: floating 3s ease-in-out infinite;
-  }
+  } */
   
   @keyframes floating {
     0% {
@@ -115,9 +125,15 @@
   @media screen and (max-width: 830px){
     .container{
         flex-direction: column-reverse;
+       
     }
     .content{
         align-items: center;
+    }
+    .heroImg{
+      height: auto;
+        width: 80%;
+        margin-bottom: 50px;
     }
   }
 

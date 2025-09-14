@@ -23,7 +23,7 @@ export const Experience = () => {
         <li  className={styles.historyItem}>
            <div className={styles.historyItemDetails}>
                <h3>Development</h3>
-             <p>Frontend Development: HTML, CSS, JavaScript, React, Bootstrap.I have made many projects using html,css,javaScript and react with responsiveness.</p>
+             <p>Proficient in frontend technologies like React.js, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS, focused on building responsive, user-friendly UIs. Experienced in backend development with Node.js, Express.js, MongoDB, and RESTful APIs, with secure authentication using JWT and Firebase. Skilled in real-time communication via Socket.IO and AI integration using the Cohere API. Comfortable with tools like Axios, Git & GitHub, Postman, and Cloudinary.</p>
            </div>
        </li>
         <li  className={styles.historyItem}>

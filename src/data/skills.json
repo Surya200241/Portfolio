@@ -26,5 +26,14 @@
     {
       "title": "JavaScript",
       "imageSrc": "skills/javascript.jpg"
+    },
+    {
+      "title": "Mongodb",
+      "imageSrc": "skills/mongodb.png"
+    },
+    {
+      "title": "Express",
+      "imageSrc": "skills/express.png"
     }
+    
   ]

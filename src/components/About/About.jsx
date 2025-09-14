@@ -4,13 +4,13 @@ export function About(){
     return <section className={styles.container} id="about">
         <h2 className={styles.title}>About</h2>
         <div className={styles.content}>
-            <img className={styles.aboutImage} src="assets\about\aboutImage.png" alt="Me sitting with a laptop"></img>
+            <img className={styles.aboutImage} src="assets\hero\surya_photo.jpg" alt="Me sitting with a laptop"></img>
         <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}><img src="assets\about\cursorIcon.png" alt="Cursor icon" />
             <div className={styles.aboutItemtext}>
-                <h3>Frontend Developer</h3>
+                <h3>Web Developer</h3>
                 <p>
-                    I'm a frontend developer with expertise in React, JavaScript, HTML, and CSS,Bootstrap. I focus on creating seamless user experiences and efficient web solutions.
+                    Proficient in React, JavaScript (ES6+), Node.js, Express, MongoDB, RESTful APIs, JWT/Firebase authentication, Socket.IO, Cohere API, Tailwind CSS, and tools like Axios, Git, Postman, and Cloudinary.
                 </p>
             </div>
             </li>
@@ -18,7 +18,7 @@ export function About(){
             <div className={styles.aboutItemtext}>
                 <h3 className={styles.pr}>Graduation</h3>
                 <p className={styles.pr}>
-                Currently, I am pursuing my graduation in Information Technology at UIET Kanpur (6th semester), with a CPI of 9.2.I am looking for internship. 
+                Currently, I am pursuing my graduation in Information Technology at UIET Kanpur (7th semester), with a CPI of 9.0 .I am looking for internship. 
                 </p>
             </div>
             </li>
