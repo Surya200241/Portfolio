@@ -16,6 +16,7 @@ export const Contact = () => {
                         </li>
                     </ul>
                     <ul>
+                        
                         <li>
                             <img src="assets\contact\githubIcon.png"></img>
                             <p>https://github.com/Surya200241</p>
