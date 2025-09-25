@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   css: {
     modules: {
-      localsConvention: 'camelCase', // Use camelCase for CSS module class names
+      localsConvention: 'camelCase', // Use camelCase for CSS module class name
     },
   },
 });
