@@ -12,6 +12,7 @@ export const Navbar = () => {
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#project">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
+                
             </ul>
         </div>
     </nav>
